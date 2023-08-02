@@ -1,6 +1,6 @@
 var admin = require("firebase-admin");
 
-var serviceAccount = require('../controllers/curso-nodejs-392817-firebase-adminsdk-wjzcd-8371b609b2.json');
+var serviceAccount = require('../controllers/face-63a17-firebase-adminsdk-a3mcy-709cabae6e.json');
 let dbfirebase;
 let dbfirestone;
 
@@ -8,7 +8,7 @@ try {
 
     admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        databaseURL: "https://curso-nodejs-392817-default-rtdb.firebaseio.com"
+        databaseURL: "https://face-63a17-default-rtdb.firebaseio.com"
     });
 
     dbfirebase = admin.database();
