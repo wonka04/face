@@ -1,7 +1,6 @@
 const { response, request } = require(`express`);
 
 const axios = require('axios');
-const { guardarArchivo, LeerArchivo } = require('../helpers/guardararchivo');
 
 
 

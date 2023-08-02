@@ -2,7 +2,7 @@ const express = require('express')
 const session = require('express-session');
 const cors = require('cors');
 const bodyparser = require('body-parser')
-const { dbConnection } = require('../db/db');
+
 //const hbs = require('hbs');
 
 
@@ -24,7 +24,7 @@ class Server {
 
 
         //ConectionBD
-        this.conectarDB();
+       
         //middlewares
         this.middlewares();
         
@@ -33,9 +33,7 @@ class Server {
         this.routes();
     }
     //Conexion a Base de Datos
-    async conectarDB() {
-        await dbConnection();
-    }
+    
     //middlewares
     middlewares() {
 
@@ -71,11 +69,9 @@ class Server {
 
 
         this.app.use(this.paths.userPath, require('../routes/user'))
-        this.app.use(this.paths.userPathform, require('../routes/appli'))
         this.app.use(this.paths.userPathen, require('../routes/useradmin'))
         this.app.use(this.paths.userPathreg, require('../routes/useradmin'))
         this.app.use(this.paths.PathdownloadM, require('../routes/user'))
-        this.app.use(this.paths.PathdownloadS, require('../routes/appli'))
         
 
 
