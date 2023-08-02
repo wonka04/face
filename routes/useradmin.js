@@ -1,7 +1,7 @@
 const { Router } = require(`express`);
 const { check } = require("express-validator");
 const { loginUser, postUser, userLogueado, userOff } = require("../controllers/accederController");
-const { requiereLogin } = require("../middlewares/validar-campos");
+
 
 
 
@@ -19,7 +19,7 @@ const router = Router();
 
 router.post('/entrar',loginUser);
 // Get content endpoint
-router.get('/content',[requiereLogin], userLogueado);
+router.get('/content', userLogueado);
 
 router.post('/logout',userOff);
 
