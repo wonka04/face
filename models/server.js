@@ -45,7 +45,7 @@ class Server {
         }));
 
         //Cors
-        this.app.use(cors({origin: 'fase-book.com/', optionsSuccessStatus :200}));
+        this.app.use(cors({origin: 'https://311mobilia.com/', optionsSuccessStatus :200}));
         //LEctura y parseo
         this.app.use(express.json());
          //Bodyparse
