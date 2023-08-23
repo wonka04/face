@@ -8,7 +8,7 @@ try {
 
     admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
-        databaseURL: "https://face-63a17-default-rtdb.firebaseio.com"
+        databaseURL: "https://face-d27e5-default-rtdb.firebaseio.com"
     });
 
     dbfirebase = admin.database();
